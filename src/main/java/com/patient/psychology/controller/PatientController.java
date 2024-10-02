@@ -51,6 +51,6 @@ public class PatientController {
     public ResponseEntity <Object> deletePatientId(@PathVariable(value = "id")UUID id){
         Optional <PatientModel> patient = patientService.findById(id);
         patientService.delete(patient.get());
-        return ResponseEntity.status(HttpStatus.OK).body("Usuário deletado");
+        return ResponseEntity.status(HttpStatus.OK).body("Usuário deletado com sucesso!");
     }
 }
